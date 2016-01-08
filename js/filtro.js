@@ -1,0 +1,10 @@
+$("#code").change(function(){
+	$.post(
+		'ordenar.php',
+		{idUser:$("#code").val()},
+		function(data){
+			$("#tabla").fadeOut(1);
+			$("#resultado").html(data);
+		}
+	);
+});
